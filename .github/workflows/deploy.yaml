@@ -1,0 +1,48 @@
+name: Deploy to EKS
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Log in to DockerHub
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
+    - name: Build and Push Docker image
+      run: |
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/auctionapi:latest .
+        docker push ${{ secrets.DOCKER_USERNAME }}/auctionapi:latest
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        region: ap-south-1
+
+    - name: Install kubectl
+      uses: azure/setup-kubectl@v3
+      with:
+        version: v1.27.3
+
+    - name: Update kubeconfig
+      run: aws eks update-kubeconfig --name express-cluster --region ap-south-1
+
+    - name: Install Helm
+      uses: azure/setup-helm@v3
+
+    - name: Deploy with Helm
+      run: |
+        helm upgrade --install auctionapi ./helm-chart \
+          --set image.repository=${{ secrets.DOCKER_USERNAME }}/auctionapi \
+          --set image.tag=latest \
+          --set env.MONGO_URI="${{ secrets.MONGO_URI }}" \
+          --set env.JWT_SECRET="${{ secrets.JWT_SECRET }}" \
+          --set env.REFRESH_TOKEN_SECRET="${{ secrets.REFRESH_TOKEN_SECRET }}"

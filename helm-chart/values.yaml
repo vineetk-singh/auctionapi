@@ -8,3 +8,8 @@ service:
   type: LoadBalancer
   port: 80
   targetPort: 8000
+
+env:
+  MONGO_URI: ""
+  JWT_SECRET: ""
+  REFRESH_TOKEN_SECRET: ""
