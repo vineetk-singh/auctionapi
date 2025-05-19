@@ -41,7 +41,7 @@ jobs:
 
     - name: Deploy with Helm
       run: |
-        helm upgrade --install auctionapi ./helm-chart \
+        helm upgrade --install auctionapic ./helm-chart \
           --set image.repository=${{ secrets.DOCKER_USERNAME }}/auctionapi \
           --set image.tag=latest \
           --set env.MONGO_URI="${{ secrets.MONGO_URI }}" \
