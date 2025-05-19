@@ -34,7 +34,7 @@ jobs:
         version: v1.27.3
 
     - name: Update kubeconfig
-      run: aws eks update-kubeconfig --name express-cluster --region ap-south-1
+      run: aws eks update-kubeconfig --name auctionapic --region ap-south-1
 
     - name: Install Helm
       uses: azure/setup-helm@v3
