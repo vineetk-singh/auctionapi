@@ -1,0 +1,3 @@
+_id,age,country,role,basePrice,batting.totalRuns,batting.total4s,batting.total6s,batting.totalCenturies,batting.total50s,batting.total20s,batting.total30s,batting.total40s,batting.battingAverage,bowling.totalOvers,bowling.totalWides,bowling.totalRuns,bowling.totalNoBalls,bowling.totalWickets,fielding.totalCatches,fielding.totalRunOuts
+Virat Kohli,35,India,batting,500000,12000,1100,200,45,80,20,40,30,55.2,100,5,900,2,50,120,20
+Ben Stokes,32,England,allrounder,450000,8500,900,180,20,60,15,25,18,47.8,120,4,800,3,60,85,18

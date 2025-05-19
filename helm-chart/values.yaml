@@ -1,0 +1,10 @@
+replicaCount: 2
+image:
+  repository: vineetkumarsingh/auctionapi
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8000

@@ -1,0 +1,12 @@
+{"timestamp":"2025-05-19T08:57:52.509Z","level":"info","message":"{\"method\":\"GET\",\"url\":\"/api/users/authStatus\",\"statusCode\":403,\"duration\":\"1ms\"}","file":"server.js"}
+{"timestamp":"2025-05-19T08:57:52.511Z","level":"info","message":"{\"method\":\"GET\",\"url\":\"/api/users/authStatus\",\"statusCode\":403,\"duration\":\"0ms\"}","file":"server.js"}
+{"timestamp":"2025-05-19T09:23:12.614Z","level":"info","message":"MongoDB connected","file":"server.js"}
+{"timestamp":"2025-05-19T09:23:41.475Z","level":"info","message":"{\"method\":\"GET\",\"url\":\"/api-docs\",\"statusCode\":301,\"duration\":\"3ms\"}","file":"server.js"}
+{"timestamp":"2025-05-19T09:23:41.478Z","level":"info","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"statusCode\":304,\"duration\":\"2ms\"}","file":"server.js"}
+{"timestamp":"2025-05-19T09:23:41.486Z","level":"info","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"statusCode\":304,\"duration\":\"1ms\"}","file":"server.js"}
+{"timestamp":"2025-05-19T09:23:41.487Z","level":"info","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"statusCode\":304,\"duration\":\"2ms\"}","file":"server.js"}
+{"timestamp":"2025-05-19T09:23:41.488Z","level":"info","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"statusCode\":304,\"duration\":\"1ms\"}","file":"server.js"}
+{"timestamp":"2025-05-19T09:23:41.489Z","level":"info","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"statusCode\":304,\"duration\":\"1ms\"}","file":"server.js"}
+{"timestamp":"2025-05-19T09:23:41.554Z","level":"info","message":"{\"method\":\"GET\",\"url\":\"/api-docs/favicon-32x32.png\",\"statusCode\":304,\"duration\":\"1ms\"}","file":"server.js"}
+{"timestamp":"2025-05-19T09:24:01.103Z","level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/players\",\"statusCode\":400,\"duration\":\"13519ms\",\"body\":{\"_id\":\"string\",\"age\":0,\"country\":\"string\",\"role\":\"batting\",\"basePrice\":0,\"records\":{\"batting\":{\"totalRuns\":0,\"total4s\":0,\"total6s\":0,\"totalCenturies\":0,\"total50s\":0,\"total20s\":0,\"total30s\":0,\"total40s\":0,\"battingAverage\":0},\"bowling\":{\"totalOvers\":0,\"totalWides\":0,\"totalRuns\":0,\"totalNoBalls\":0,\"totalWickets\":0},\"fielding\":{\"totalCatches\":0,\"totalRunOuts\":0}}}}","file":"server.js"}
+{"timestamp":"2025-05-19T09:24:11.251Z","level":"info","message":"{\"method\":\"GET\",\"url\":\"/api/players\",\"statusCode\":200,\"duration\":\"234ms\"}","file":"server.js"}

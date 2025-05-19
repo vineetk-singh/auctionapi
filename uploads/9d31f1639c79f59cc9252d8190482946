@@ -1,0 +1,3 @@
+"_id,age,country,role,basePrice,totalRuns,total4s,total6s,totalCenturies,total50s,total20s,total30s,total40s,battingAverage,totalOvers,totalWides,bowlingRuns,totalNoBalls,totalWickets,totalCatches,totalRunOuts"
+"Virat Kohli,35,India,batting,1000000,12000,1000,500,70,100,50,40,30,55.4,0,0,0,0,0,100,15"
+"Bumrah,30,India,bowling,900000,100,10,5,0,1,0,0,0,9.4,500,30,400,15,150,20,5"
